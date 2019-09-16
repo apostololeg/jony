@@ -6,6 +6,8 @@ Web Component Framework
 
 ### Example
 
+`yarn example` or `npm run example`
+
 ```js
 import h, { html, Component, State } from 'jony';
 import '../app-header/app-header';
