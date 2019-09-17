@@ -2,7 +2,9 @@
   "name": "jony",
   "version": "1.0.2",
   "description": "Web Components Framework",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "index.js",
+  "source": "index.js",
   "scripts": {
     "build": "NODE_ENV=production parcel ./index.js -o dist/index.js",
     "example": "parcel ./example/index.html",
