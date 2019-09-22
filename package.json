@@ -1,6 +1,6 @@
 {
   "name": "jony",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Web Components Framework",
   "main": "dist/index.js",
   "scripts": {
