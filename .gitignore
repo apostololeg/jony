@@ -1,6 +1,5 @@
 node_modules/
 .cache/
 dist/
-!dist/index.js
 yarn.lock
 package-lock.json

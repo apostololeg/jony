@@ -39,10 +39,6 @@ export default h('app-root', App);
 
 Powered by [Proxy](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Proxy).
 
-#### @Props
-
-Made with `observedAttributes` and `attributeChangedCallback` (see [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)).
-
 ### Installation
 
 `yarn add jony` or `npm i jony`

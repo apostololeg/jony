@@ -1,14 +1,14 @@
-import { render } from 'lighterhtml';
-export { html } from 'lighterhtml';
+import { html, render } from 'lighterhtml';
+
+export { html };
 
 export class Component extends HTMLElement {
   connectedCallback() {
     this.update();
   }
 
-  update() {
-    console.log('update');
-    render(this, this.render.bind(this));
+  update(renderRoot = this, renderFunc = this.render.bind(this)) {
+    render(renderRoot, renderFunc);
   }
 
   render() {
@@ -30,33 +30,6 @@ export function State(stateObj) {
           return true
         }
       });
-    }
-  }
-}
-
-export function Props(names) {
-  return function(C) {
-    return class extends C {
-      connectedCallback() {
-        this.props = names.reduce((acc, name) => {
-          acc[name] = this.getAttribute(name);
-          return acc;
-        }, {});
-
-        super.connectedCallback();
-      }
-
-
-      static get observedAttributes() {
-        return names;
-      }
-
-      attributeChangedCallback(name, oldVal, newVal) {
-        if (this.props && newVal !== oldVal) {
-          this.props[name] = newVal;
-          this.update();
-        }
-      }
     }
   }
 }

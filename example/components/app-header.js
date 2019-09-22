@@ -1,6 +1,5 @@
-import h, { html, Component, Props } from '../..';
+import h, { html, Component } from '../..';
 
-@Props(['title'])
 class Header extends Component {
   render() {
     const { title } = this.props;
