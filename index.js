@@ -2,12 +2,25 @@ import { html, render } from 'lighterhtml';
 
 export { html };
 
+const _s = v => v || '';
+
 export class Component extends HTMLElement {
   connectedCallback() {
+    this._initClassName();
     this.update();
   }
 
-  update(renderRoot = this, renderFunc = this.render.bind(this)) {
+  _initClassName() {
+    this.setAttribute(
+      'class',
+      `${_s(this.class)} ${_s(this.getAttribute('class'))}`
+    );
+  }
+
+  update(
+    renderRoot = this.renderRoot || this,
+    renderFunc = this.render.bind(this)
+  ) {
     render(renderRoot, renderFunc);
   }
 
