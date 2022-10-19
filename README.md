@@ -4,7 +4,7 @@
 Web Component Framework
 ====
 
-### Example
+### [Example](https://github.com/apostololeg/jony-example)
 
 `yarn example` or `npm run example`
 
